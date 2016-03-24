@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class DisplayPoem extends AppCompatActivity {
 
     private TextView testTextView;
-    private int words = MainActivity.words, lines = 4, paragraphs = 5;
+    private int words = MainActivity.words, lines = MainActivity.lines, paragraphs = MainActivity.paragraphs;
     private Poem aPoem = new Poem();
     private java.lang.String output;
 
