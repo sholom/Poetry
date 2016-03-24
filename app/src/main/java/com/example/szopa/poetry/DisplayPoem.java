@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class DisplayPoem extends AppCompatActivity {
 
     private TextView testTextView;
-    private int words = 3, lines = 4, paragraphs = 5;
+    private int words = MainActivity.words, lines = 4, paragraphs = 5;
     private Poem aPoem = new Poem();
     private java.lang.String output;
 
@@ -22,9 +22,9 @@ public class DisplayPoem extends AppCompatActivity {
         output = aPoem.writePoem(words, lines, paragraphs);
         testTextView.setText(output);
     }
-
+/*
     public void goToMain (View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+    } */
 }

@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
+    android:fitsSystemWindows="true"
     tools:context="com.example.szopa.poetry.DisplayPoem">
 
-    <Button
-        android:layout_width="wrap_content"
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go back"
-        android:id="@+id/goBack"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="goToMain" />
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/view">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/goBack"
-        android:layout_toStartOf="@+id/goBack"
-        android:layout_alignParentTop="true">
+    </android.support.design.widget.AppBarLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/testTextView" />
-    </ScrollView>
+    <include layout="@layout/content_display_poem"
+        android:id="@+id/include" />
 
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
